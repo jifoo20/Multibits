@@ -1,0 +1,147 @@
+﻿{
+	"toJSON": true,
+	"extraProperties": {
+		"version": "2",
+		"__CDATA": "\n\t\t\n\t\t\n\t",
+		"classes": {
+			"__CDATA": "\n\t\t\t\n\t\t\t\n\t\t",
+			"Item": {
+				"panelColor": "#eee",
+				"__CDATA": "\n\t\t\t\t\n\t\t\t",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": "true",
+					"__CDATA": "\n\t\t\t\t\t\n\t\t\t\t",
+					"position": {
+						"X": "25",
+						"Y": "20"
+					}
+				}
+			},
+			"Categorie": {
+				"panelColor": "#7F7F7F",
+				"__CDATA": "\n\t\t\t\t\n\t\t\t",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": "true",
+					"__CDATA": "\n\t\t\t\t\t\n\t\t\t\t",
+					"position": {
+						"X": "367",
+						"Y": "26"
+					}
+				}
+			}
+		},
+		"model": {
+			"workspaceLeft": 0,
+			"workspaceTop": 0,
+			"scriptMode": "manual"
+		}
+	},
+	"dataClasses": [
+		{
+			"name": "Categorie",
+			"className": "Categorie",
+			"collectionName": "Categories",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"autosequence": true,
+					"type": "long",
+					"indexKind": "btree",
+					"primKey": true
+				},
+				{
+					"name": "nom",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "description",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "actif",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool"
+				},
+				{
+					"name": "items",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "Items",
+					"reversePath": true,
+					"path": "categorie"
+				}
+			]
+		},
+		{
+			"name": "Item",
+			"className": "Item",
+			"collectionName": "Items",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"autosequence": true,
+					"type": "long",
+					"indexKind": "btree",
+					"primKey": true
+				},
+				{
+					"name": "nom",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "description",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "actif",
+					"kind": "storage",
+					"scope": "public",
+					"type": "bool"
+				},
+				{
+					"name": "image",
+					"kind": "storage",
+					"scope": "public",
+					"type": "image"
+				},
+				{
+					"name": "imageHD",
+					"kind": "storage",
+					"scope": "public",
+					"type": "image"
+				},
+				{
+					"name": "categorie",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "Categorie",
+					"path": "Categorie"
+				},
+				{
+					"name": "categorieNom",
+					"scope": "public",
+					"path": "categorie.nom",
+					"type": "string",
+					"kind": "alias"
+				}
+			]
+		}
+	]
+}

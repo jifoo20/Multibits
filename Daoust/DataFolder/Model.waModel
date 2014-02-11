@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><EntityModelCatalog>
+	<extraProperties ____objectunic="true" version="1">
+		<classes ____objectunic="true">
+			<Catégorie ____objectunic="true" panelColor="#76923C">
+				<panel ____objectunic="true" isOpen="true" pathVisible="true">
+					<position ____objectunic="true" X="317" Y="23"/>
+				</panel>
+			</Catégorie>
+			<Item ____objectunic="true" panelColor="#fff" note="">
+				<panel ____objectunic="true" isOpen="true" pathVisible="true">
+					<position ____objectunic="true" X="31" Y="24"/>
+				</panel>
+			</Item>
+			<ItemPublic ____objectunic="true" panelColor="#70CCC2">
+				<panel ____objectunic="true" isOpen="false" pathVisible="true">
+					<position ____objectunic="true" X="44" Y="313"/>
+				</panel>
+			</ItemPublic>
+			<CatégoriePublic ____objectunic="true" panelColor="#eee">
+				<panel ____objectunic="true" isOpen="false">
+					<position ____objectunic="true" X="360" Y="344"/>
+				</panel>
+			</CatégoriePublic>
+		</classes>
+		<model ____objectunic="true" workspaceLeft="0" workspaceTop="0"/>
+	</extraProperties>
+	<dataClasses name="Catégorie" className="Catégorie" collectionName="Catégories" scope="public">
+		<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" primKey="true"/>
+		<attributes name="nom" kind="storage" scope="public" type="string"/>
+		<attributes name="description" kind="storage" scope="public" type="string"/>
+		<attributes name="actif" kind="storage" scope="public" type="bool"/>
+		<attributes name="itemCollection" kind="relatedEntities" scope="public" type="Items" reversePath="true" path="catégorie"/>
+	</dataClasses>
+	<dataClasses name="CatégoriePublic" className="CatégoriePublic" collectionName="CatégoriePublicCollection" scope="public" extends="Catégorie">
+		<restrictingQuery queryStatement="actif = &quot;true&quot;"/>
+		<attributes name="itemPublicCollection" kind="relatedEntities" scope="public" type="ItemPublicCollection" reversePath="true" path="cPublic"/>
+	</dataClasses>
+	<dataClasses name="Item" className="Item" collectionName="Items" scope="public">
+		<attributes name="ID" kind="storage" scope="public" unique="true" autosequence="true" type="long" primKey="true"/>
+		<attributes name="nom" kind="storage" scope="public" type="string"/>
+		<attributes name="decription" kind="storage" scope="public" type="string"/>
+		<attributes name="actif" kind="storage" scope="public" type="bool"/>
+		<attributes name="image" kind="storage" scope="public" type="image"/>
+		<attributes name="imageHD" kind="storage" scope="public" type="image"/>
+		<attributes name="catégorie" kind="relatedEntity" scope="public" type="Catégorie" path="Catégorie"/>
+		<attributes name="catégorieNom" kind="alias" scope="public" type="string" path="catégorie.nom"/>
+	</dataClasses>
+	<dataClasses name="ItemPublic" className="ItemPublic" collectionName="ItemPublicCollection" scope="public" extends="Item">
+		<restrictingQuery queryStatement="actif = &apos;true&apos;"/>
+		<attributes name="cPublic" kind="relatedEntity" scope="public" type="CatégoriePublic" path="CatégoriePublic"/>
+	</dataClasses>
+</EntityModelCatalog>

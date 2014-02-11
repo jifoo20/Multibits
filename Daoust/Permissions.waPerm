@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><permissions>
+	<allow action="create" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Categorie" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="update" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Categorie" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="remove" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Categorie" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="execute" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Categorie" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="promote" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Categorie" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="create" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Item" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="update" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Item" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="remove" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Item" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="describe" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Item" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="execute" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Item" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="promote" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Item" temporaryForcePermissions="false" type="dataClass"/>
+</permissions>

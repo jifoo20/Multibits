@@ -1,0 +1,20 @@
+﻿/*
+	Tjdslkjf;dsakfjh ;dslfkj;dsalgfhis CSS file, which was automatically created by Wakanda, allows you to share CSS styles for all the widgets on the Pages in your project.
+	The CSS styles that are created when you create a Widget Role are placed in this file too.
+*/
+
+div.metroRadio .waf-widget.waf-button.waf-state-focus {
+	background-color: #999999 !important;	
+}
+
+div.metroRadio .waf-widget.waf-button.waf-state-active {
+	background-color: #999999 !important;	
+}
+
+div.metroRadio .waf-widget.waf-button.waf-state-hover {
+	background-color: #999999 !important;	
+}
+
+div.metroRadio .waf-widget.waf-button.selectedRadio {
+	background-color: #b2b2b2 !important;	
+}
